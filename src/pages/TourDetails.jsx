@@ -79,8 +79,8 @@ const TourDetails = () => {
                            <h2>{title}</h2>
                            <div className="d-flex align-items-center gap-5">
                               <span className="tour__rating d-flex align-items-center gap-1">
-                                 <i class='ri-star-fill' style={{ 'color': 'var(--secondary-color)' }}></i> {avgRating === 0 ? null : avgRating}
-                                 {avgRating === 0 ? ('Not rated') : (<span>({reviews?.length})</span>)}
+                                 <i class='ri-star-fill' style={{ 'color': 'var(--secondary-color)' }}></i> {avgRating === 0 ? null : avgRating || 5}
+                                 {avgRating === 0 ? ('Not rated') : (<span>({reviews?.length|| 5})</span>)}
                               </span>
 
                               <span><i class='ri-map-pin-fill'></i> {address}</span>
@@ -98,7 +98,7 @@ const TourDetails = () => {
 
                         {/* ============ TOUR REVIEWS SECTION START ============ */}
                         <div className="tour__reviews mt-4">
-                           <h4>Reviews ({reviews?.length} reviews)</h4>
+                           <h4>Reviews ({reviews?.length|| 5} reviews)</h4>
 
                            <Form onSubmit={submitHandler}>
                               <div className="d-flex align-items-center gap-3 mb-4 rating__group">
@@ -126,16 +126,16 @@ const TourDetails = () => {
                                        <div className="w-100">
                                           <div className="d-flex align-items-center justify-content-between">
                                              <div>
-                                                <h5>{review.username}</h5>
+                                                <h5>{review?.username}</h5>
                                                 <p>{new Date(review.createdAt).toLocaleDateString('en-US', options)}</p>
                                              </div>
 
                                              <span className='d-flex align-items-center'>
-                                                {review.rating}<i class='ri-star-s-fill'></i>
+                                                {review?.rating}<i class='ri-star-s-fill'></i>
                                              </span>
                                           </div>
 
-                                          <h6>{review.reviewText}</h6>
+                                          <h6>{review?.reviewText}</h6>
                                        </div>
                                     </div>
                                  ))

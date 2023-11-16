@@ -105,7 +105,7 @@ const Footer = () => {
                            <span><i class='ri-map-pin-line'></i></span>
                            Address:
                         </h6>
-                        <p className='mb-0'>Lorem</p>
+                        <p className='mb-0'>khilgaon</p>
                      </ListGroupItem>
 
                      <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-3'>
@@ -114,7 +114,7 @@ const Footer = () => {
                            Email:
                         </h6>
 
-                        <p className='mb-0'>Lorem</p>
+                        <p className='mb-0'>ahad.aiman2@gmail.com</p>
                      </ListGroupItem>
 
                      <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-3'>
@@ -123,7 +123,7 @@ const Footer = () => {
                            Phone:
                         </h6>
 
-                        <p className='mb-0'>Lorem</p>
+                        <p className='mb-0'>01533887945</p>
                      </ListGroupItem>
                   </ListGroup>
                </Col>
